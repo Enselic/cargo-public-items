@@ -2,7 +2,7 @@
 
 ### `public-api` and `cargo-public-api`
 
-1. First release `rustdoc-json` and `rustup-toolchain` if needed. See below.
+1. First release `rustdoc-json` and `rustup-toolchain` if needed. See below. NOTE: Because of circular dependencies you must release one helper package at a time from `main`. You can't update all packages in a single commit.
 1. Update `public-api/CHANGELOG.md`
 1. Create a PR that targets `main` that
     1. Bumps version with `cargo set-version -p public-api x.y.z`

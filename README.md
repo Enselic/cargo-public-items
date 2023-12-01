@@ -112,6 +112,11 @@ UPDATE_EXPECT=1 cargo test public_api
 
 This creates a `tests/public-api.txt` file in your project that you `git add` together with your other project files. Whenever you change the public API, you need to bless it again with the above command. If you forget to bless, the test will fail, together with instructions on how to bless.
 
+Note that you if you choose to not version your `Cargo.lock` in your repo then your CI can suddenly fail if:
+* you expose types from third party crates in your public API
+* those third party crates changes their blanket implementations
+* you do not `--omit blanket-impls`
+
 ## Less Noisy Output
 
 For completeness, items belonging to _Blanket Implementations_, _Auto Trait Implementations_, and _Auto Derived Implementations_, such as
