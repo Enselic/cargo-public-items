@@ -18,7 +18,7 @@ Usage: cargo public-api completions [OPTIONS] <SHELL>
 
 Arguments:
   <SHELL>
-          [possible values: bash, elvish, fig, fish, nushell, powershell, zsh]
+          [possible values: bash, elvish, fish, nushell, powershell, zsh]
 
 Options:
       --manifest-path <PATH>

@@ -3,7 +3,7 @@ Generate completion scripts for many different shells.
 Usage: cargo public-api completions [OPTIONS] <SHELL>
 
 Arguments:
-  <SHELL>  [possible values: bash, elvish, fig, fish, nushell, powershell, zsh]
+  <SHELL>  [possible values: bash, elvish, fish, nushell, powershell, zsh]
 
 Options:
       --manifest-path <PATH>  Path to `Cargo.toml` [default: Cargo.toml]
