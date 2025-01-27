@@ -8,5 +8,8 @@ for package in rustup-toolchain rustdoc-json public-api cargo-public-api; do
 done
 
 for pid in "${pids[@]}"; do
-    wait $pid || { echo "ERROR: cargo publish --dry-run failed"; exit 1; }
+    wait $pid || {
+        echo "ERROR: cargo publish --dry-run failed"
+        exit 1
+    }
 done
