@@ -18,6 +18,8 @@ scripts/cargo-test.sh
 
 scripts/cargo-test-without-rustup.sh
 
+scripts/cargo-publish-dry-run.sh
+
 if command -v cargo-audit >/dev/null; then
     scripts/cargo-audit.sh
 else

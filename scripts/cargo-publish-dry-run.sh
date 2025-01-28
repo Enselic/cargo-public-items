@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 set -o nounset -o pipefail -o errexit
 
-pids=()
-for package in rustup-toolchain rustdoc-json public-api cargo-public-api; do
-    cargo publish --dry-run -p $package &
-    pids+=($!)
-done
+# Ensure there are no circular dependencies.
 
-for pid in "${pids[@]}"; do
-    wait $pid || {
-        echo "ERROR: cargo publish --dry-run failed"
-        exit 1
-    }
+packages="
+    rustup-toolchain
+    rustdoc-json
+    public-api
+    cargo-public-api
+"
+
+for package in $packages; do
+    cargo publish --dry-run --package $package
 done
