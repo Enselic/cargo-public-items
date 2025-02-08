@@ -109,7 +109,7 @@ For `public-api` and `cargo-public-api` we bump
 1. Update `rustup-toolchain/CHANGELOG.md`
 1. Bump version with
    ```
-   ( cd rustup-toolchain ; cargo set-version -p rustup-toolchain x.y.z )
+   ( version=0.x.y ; cargo set-version -p rustup-toolchain $version && cd rustup-toolchain && cargo set-version -p rustup-toolchain $version )
    ```
 1. Push branch
 

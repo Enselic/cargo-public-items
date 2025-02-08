@@ -7,8 +7,7 @@ workspace_dir="$(workspace_dir_from_name ${1:-})"
 case "$workspace_dir" in
 .)
     library_package="public-api"
-    # We only need to run `shfmt` from the repo root
-    run_shfmt=true
+    run_shfmt=true # We only need to run `shfmt` from the repo root
     ;;
 rustdoc-json)
     library_package="rustdoc-json"
